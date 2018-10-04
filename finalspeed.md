@@ -49,3 +49,37 @@ sh /fs/stop.sh
 sh /fs/restart.sh; tail -f /fs/server.log
 ```
 
+### 设置服务端口
+
+```text
+mkdir -p /fs/cnf/ ; echo 端口号 > /fs/cnf/listen_port ; sh /fs/restart.sh
+```
+
+{% hint style="danger" %}
+## 默认udp 150和tcp 150 ,由于finalspeed的工作原理,请不要在本机防火墙开放finalspeed所使用的tcp端口.
+{% endhint %}
+
+### 设置开机启动
+
+```text
+chmod +x /etc/rc.local
+```
+
+```text
+vi /etc/rc.local
+```
+
+加入
+
+```text
+sh /fs/start.sh
+```
+
+{% hint style="warning" %}
+### 还要注意，已经在运行了没有停止情况下重复启动是会报错的，所以最好先停止或者重启。
+{% endhint %}
+
+## 软件
+
+> [https://raw.githubusercontent.com/partyinstead/speed/master/FinalSpeed/Client/FinalSpeed.zip](https://raw.githubusercontent.com/partyinstead/speed/master/FinalSpeed/Client/FinalSpeed.zip)
+
