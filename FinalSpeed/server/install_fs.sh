@@ -4,7 +4,7 @@ export PATH
 
 
 install_path=/xs/
-package_download_url=https://raw.githubusercontent.com/partyinstead/speed/master/FinalSpeed/server/tcpspeed_server.zip
+package_download_url=https://github.com/partyinstead/speed/blob/master/FinalSpeed/server/tcpspeed_server.zip
 package_save_name=tcpspeed_server.zip
  
 function checkjava(){
